@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Zenon Electrics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="contact-info">
+                    <a href="tel:+1234567890"><i class="fas fa-phone"></i> +123 456 7890</a>
+                    <a href="mailto:info@zenonelectrics.com"><i class="fas fa-envelope"></i> info@zenonelectrics.com</a>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">Z</div>
+                    <div class="logo-text">
+                        <h1>ZENON ELECTRICS</h1>
+                        <span>Powering Smarter, Safer, Sustainable Living</span>
+                    </div>
+                </a>
+                <button class="mobile-menu-btn" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav id="mainNav">
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-buttons">
+                    <a href="contact.html#quote" class="btn btn-outline">Get Quote</a>
+                    <a href="contact.html" class="btn btn-primary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Smart Solutions for Modern Living</h1>
+                <p>Zenon Electrics provides cutting-edge solar power, home automation, and security solutions to transform your space into an efficient, secure, and sustainable environment.</p>
+                <div class="hero-buttons">
+                    <a href="products.html" class="btn btn-primary">Explore Products</a>
+                    <a href="services.html" class="btn btn-outline">Our Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Zenon Electrics</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <h3>Eco-Friendly Solutions</h3>
+                    <p>Harness solar energy to reduce your carbon footprint and electricity bills with our sustainable power systems.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Enhanced Security</h3>
+                    <p>Protect your property with our smart security systems, including CCTV, electric fencing, and smart access control.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Smart Home Automation</h3>
+                    <p>Transform your living space with intelligent automation for lighting, irrigation, entertainment, and appliances.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Expert Support</h3>
+                    <p>Our team of certified professionals provides consultation, installation, and ongoing maintenance services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Product Categories</h2>
+            </div>
+            <div class="categories-tabs">
+                <button class="tab-btn active" data-category="all">All Categories</button>
+                <button class="tab-btn" data-category="solar">Solar Solutions</button>
+                <button class="tab-btn" data-category="automation">Home Automation</button>
+                <button class="tab-btn" data-category="security">Security Systems</button>
+                <button class="tab-btn" data-category="entertainment">Entertainment</button>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card" data-category="solar">
+                    <div class="category-img">
+                        <i class="fas fa-solar-panel"></i>
+                    </div>
+                    <div class="category-content">
+                        <h3>Solar Power Systems</h3>
+                        <p>Complete solar solutions for homes and businesses</p>
+                        <ul>
+                            <li>Solar Generators</li>
+                            <li>Lithium-Ion Batteries</li>
+                            <li>Inverters</li>
+                            <li>Solar Street Lighting</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="category-card" data-category="automation">
+                    <div class="category-img">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="category-content">
+                        <h3>Home Automation</h3>
+                        <p>Smart solutions for modern living</p>
+                        <ul>
+                            <li>Smart Lighting Systems</li>
+                            <li>Automated Irrigation</li>
+                            <li>Smart Locks & Gates</li>
+                            <li>Smart Appliances</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="category-card" data-category="security">
+                    <div class="category-img">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <div class="category-content">
+                        <h3>Security Systems</h3>
+                        <p>Protect what matters most</p>
+                        <ul>
+                            <li>CCTV & Smart Cameras</li>
+                            <li>Electric Fencing</li>
+                            <li>Smart Access Control</li>
+                            <li>Surveillance Solutions</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="category-card" data-category="entertainment">
+                    <div class="category-img">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <div class="category-content">
+                        <h3>Home Entertainment</h3>
+                        <p>Immersive entertainment experiences</p>
+                        <ul>
+                            <li>Android TV Projectors</li>
+                            <li>Projector Stands</li>
+                            <li>Video Game Pads</li>
+                            <li>Diffusers</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="category-card" data-category="solar">
+                    <div class="category-img">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <div class="category-content">
+                        <h3>Power Solutions</h3>
+                        <p>Reliable power for all needs</p>
+                        <ul>
+                            <li>Voltage Stabilizers</li>
+                            <li>Inverters</li>
+                            <li>Battery Systems</li>
+                            <li>Wiring Accessories</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="category-card" data-category="automation">
+                    <div class="category-img">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="category-content">
+                        <h3>Lighting Solutions</h3>
+                        <p>Illumination for every space</p>
+                        <ul>
+                            <li>Practical Lighting</li>
+                            <li>Decorative Lighting</li>
+                            <li>Solar Lighting</li>
+                            <li>Specialty Lighting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Professional Services</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3><i class="fas fa-cogs"></i> Installation Services</h3>
+                    <p>Our certified technicians provide professional installation for all our products, ensuring optimal performance and safety.</p>
+                    <ul>
+                        <li>Solar System Installation</li>
+                        <li>Home Automation Setup</li>
+                        <li>Security System Installation</li>
+                        <li>Lighting System Setup</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3><i class="fas fa-clipboard-check"></i> Consultation & Design</h3>
+                    <p>We offer customized solutions tailored to your specific needs through expert consultation and system design.</p>
+                    <ul>
+                        <li>Energy Efficiency Audits</li>
+                        <li>Smart Home Planning</li>
+                        <li>Security System Design</li>
+                        <li>Custom Solar Solutions</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3><i class="fas fa-tools"></i> Maintenance & Repair</h3>
+                    <p>Keep your systems running smoothly with our comprehensive maintenance and repair services.</p>
+                    <ul>
+                        <li>System Health Checks</li>
+                        <li>Preventive Maintenance</li>
+                        <li>24/7 Emergency Repairs</li>
+                        <li>Component Replacement</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3><i class="fas fa-headset"></i> After-Sales Support</h3>
+                    <p>Our commitment continues after installation with dedicated support and training.</p>
+                    <ul>
+                        <li>User Training Sessions</li>
+                        <li>Technical Support</li>
+                        <li>Warranty Management</li>
+                        <li>System Upgrades</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Clients Say</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Zenon Electrics transformed our home with a complete solar and automation solution. Their team was professional and the results exceeded our expectations!"</p>
+                    <div class="client">
+                        <h4>Sarah Johnson</h4>
+                        <span>Homeowner</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>"The security system they installed has given us peace of mind. The CCTV and smart locks work seamlessly with our home automation setup."</p>
+                    <div class="client">
+                        <h4>Michael Chen</h4>
+                        <span>Business Owner</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Transform Your Space?</h2>
+            <p>Contact us today for a free consultation and discover how Zenon Electrics can enhance your home or business with smart, sustainable solutions.</p>
+            <div class="cta-buttons">
+                <a href="contact.html#consultation" class="btn btn-light">Request Consultation</a>
+                <a href="tel:+1234567890" class="btn btn-outline">Call Now: +123 456 7890</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <h3>About Zenon Electrics</h3>
+                    <p>We empower homes and businesses with integrated technology solutions designed for comfort, security, efficiency, and entertainment.</p>
+                    <div class="footer-social">
+                        <h3>Follow Us</h3>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-col footer-contact">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>123 Tech Avenue, Innovation City</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <div>+123 456 7890</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>info@zenonelectrics.com</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <div>Mon-Fri: 8:00 AM - 6:00 PM<br>Sat: 9:00 AM - 4:00 PM</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="products.html"><i class="fas fa-chevron-right"></i> Products</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-hours">
+                    <h3>Business Hours</h3>
+                    <p><span>Monday - Friday</span> <span>8:00 AM - 6:00 PM</span></p>
+                    <p><span>Saturday</span> <span>9:00 AM - 4:00 PM</span></p>
+                    <p><span>Sunday</span> <span>Closed</span></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2023</span> Zenon Electrics. All Rights Reserved. | Designed with <i class="fas fa-heart"></i> for Smart Living</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

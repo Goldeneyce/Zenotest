@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Zenon Electrics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="contact-info">
+                    <a href="tel:+1234567890"><i class="fas fa-phone"></i> +123 456 7890</a>
+                    <a href="mailto:info@zenonelectrics.com"><i class="fas fa-envelope"></i> info@zenonelectrics.com</a>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">Z</div>
+                    <div class="logo-text">
+                        <h1>ZENON ELECTRICS</h1>
+                        <span>Powering Smarter, Safer, Sustainable Living</span>
+                    </div>
+                </a>
+                <button class="mobile-menu-btn" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav id="mainNav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="products.html" class="active">Products</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-buttons">
+                    <a href="contact.html#quote" class="btn btn-outline">Get Quote</a>
+                    <a href="contact.html" class="btn btn-primary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Premium Electronics Collection</h1>
+            <p>Discover cutting-edge technology for your home and business</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Products</h2>
+                <p>Explore our wide range of high-quality electronics and appliances</p>
+            </div>
+
+            <div class="categories-tabs">
+                <button class="tab-btn active" data-category="all">All Products</button>
+                <button class="tab-btn" data-category="home">Home Appliances</button>
+                <button class="tab-btn" data-category="entertainment">Entertainment</button>
+                <button class="tab-btn" data-category="cooling">Cooling Solutions</button>
+                <button class="tab-btn" data-category="kitchen">Kitchen Essentials</button>
+                <button class="tab-btn" data-category="security">Security</button>
+            </div>
+
+            <div class="products-grid">
+                <!-- LED Projector -->
+                <div class="product-card" data-category="entertainment">
+                    <div class="product-badge">New</div>
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1611078489935-0cb964de46d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="4K LED Projector">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">Entertainment</div>
+                        <h3 class="product-title">UltraHD 4K LED Projector</h3>
+                        <p class="product-description">Immersive home theater experience with 4K resolution and smart connectivity</p>
+                        <div class="product-price">
+                            <span class="current-price">$349.99</span>
+                            <span class="original-price">$499.99</span>
+                        </div>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="rating-count">(142 reviews)</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-primary">Add to Cart</button>
+                            <button class="btn-icon"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Refrigerator -->
+                <div class="product-card" data-category="home">
+                    <div class="product-badge">Smart</div>
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1584564472417a8bda2da6c5c0a0d94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Smart Refrigerator">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">Home Appliances</div>
+                        <h3 class="product-title">Smart French Door Refrigerator</h3>
+                        <p class="product-description">Energy-efficient with smart temperature control and spacious design</p>
+                        <div class="product-price">
+                            <span class="current-price">$1,899.99</span>
+                            <span class="original-price">$2,199.99</span>
+                        </div>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="rating-count">(89 reviews)</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-primary">Add to Cart</button>
+                            <button class="btn-icon"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Air Conditioner -->
+                <div class="product-card" data-category="cooling">
+                    <div class="product-badge">Eco-Friendly</div>
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1585730064461-365a4d54a3f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1176&q=80" alt="Inverter Air Conditioner">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">Cooling Solutions</div>
+                        <h3 class="product-title">Inverter Split AC 1.5 Ton</h3>
+                        <p class="product-description">Energy-saving inverter technology with 5-star rating and Wi-Fi control</p>
+                        <div class="product-price">
+                            <span class="current-price">$599.99</span>
+                            <span class="original-price">$749.99</span>
+                        </div>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-count">(204 reviews)</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-primary">Add to Cart</button>
+                            <button class="btn-icon"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toaster -->
+                <div class="product-card" data-category="kitchen">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1189&q=80" alt="Stainless Steel Toaster">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">Kitchen Essentials</div>
+                        <h3 class="product-title">4-Slice Stainless Steel Toaster</h3>
+                        <p class="product-description">Premium toaster with multiple settings and extra-wide slots</p>
+                        <div class="product-price">
+                            <span class="current-price">$59.99</span>
+                            <span class="original-price">$79.99</span>
+                        </div>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="rating-count">(67 reviews)</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-primary">Add to Cart</button>
+                            <button class="btn-icon"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vacuum Cleaner -->
+                <div class="product-card" data-category="home">
+                    <div class="product-badge">Best Seller</div>
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Robot Vacuum Cleaner">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">Home Appliances</div>
+                        <h3 class="product-title">Smart Robot Vacuum Cleaner</h3>
+                        <p class="product-description">Self-charging with laser mapping and app control for smart cleaning</p>
+                        <div class="product-price">
+                            <span class="current-price">$299.99</span>
+                            <span class="original-price">$399.99</span>
+                        </div>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="rating-count">(321 reviews)</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-primary">Add to Cart</button>
+                            <button class="btn-icon"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Washing Machine -->
+                <div class="product-card" data-category="home">
+                    <div class="product-badge">Smart</div>
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1626804475297-41608ea09aeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Front Load Washing Machine">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">Home Appliances</div>
+                        <h3 class="product-title">9kg Front Load Washing Machine</h3>
+                        <p class="product-description">Energy-efficient with steam wash technology and multiple programs</p>
+                        <div class="product-price">
+                            <span class="current-price">$699.99</span>
+                            <span class="original-price">$899.99</span>
+                        </div>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="rating-count">(115 reviews)</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-primary">Add to Cart</button>
+                            <button class="btn-icon"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Microwave Oven -->
+                <div class="product-card" data-category="kitchen">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1591035898570-71dbf33f2e6a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Convection Microwave Oven">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">Kitchen Essentials</div>
+                        <h3 class="product-title">25L Convection Microwave Oven</h3>
+                        <p class="product-description">Grill, convection and microwave cooking in one smart appliance</p>
+                        <div class="product-price">
+                            <span class="current-price">$149.99</span>
+                            <span class="original-price">$199.99</span>
+                        </div>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="rating-count">(98 reviews)</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-primary">Add to Cart</button>
+                            <button class="btn-icon"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Security Camera -->
+                <div class="product-card" data-category="security">
+                    <div class="product-badge">Top Rated</div>
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1590959651373-a3db0f38a961?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1039&q=80" alt="Smart Security Camera">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">Security</div>
+                        <h3 class="product-title">4K Smart Security Camera</h3>
+                        <p class="product-description">360° coverage with night vision and AI-powered motion detection</p>
+                        <div class="product-price">
+                            <span class="current-price">$129.99</span>
+                            <span class="original-price">$159.99</span>
+                        </div>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-count">(256 reviews)</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-primary">Add to Cart</button>
+                            <button class="btn-icon"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coffee Maker -->
+                <div class="product-card" data-category="kitchen">
+                    <div class="product-badge">Smart</div>
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Smart Coffee Maker">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">Kitchen Essentials</div>
+                        <h3 class="product-title">Smart Programmable Coffee Maker</h3>
+                        <p class="product-description">Brew perfect coffee with app control and scheduled brewing</p>
+                        <div class="product-price">
+                            <span class="current-price">$89.99</span>
+                            <span class="original-price">$119.99</span>
+                        </div>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="rating-count">(83 reviews)</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-primary">Add to Cart</button>
+                            <button class="btn-icon"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <h3>About Zenon Electrics</h3>
+                    <p>We empower homes and businesses with integrated technology solutions designed for comfort, security, efficiency, and entertainment.</p>
+                    <div class="footer-social">
+                        <h3>Follow Us</h3>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-col footer-contact">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>123 Tech Avenue, Innovation City</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <div>+123 456 7890</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>info@zenonelectrics.com</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <div>Mon-Fri: 8:00 AM - 6:00 PM<br>Sat: 9:00 AM - 4:00 PM</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="products.html"><i class="fas fa-chevron-right"></i> Products</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-hours">
+                    <h3>Business Hours</h3>
+                    <p><span>Monday - Friday</span> <span>8:00 AM - 6:00 PM</span></p>
+                    <p><span>Saturday</span> <span>9:00 AM - 4:00 PM</span></p>
+                    <p><span>Sunday</span> <span>Closed</span></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2023</span> Zenon Electrics. All Rights Reserved. | Designed with <i class="fas fa-heart"></i> for Smart Living</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
