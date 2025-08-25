@@ -23,6 +23,7 @@ body {
     color: var(--dark);
     background-color: var(--light);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5 {
@@ -39,7 +40,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .btn {
-    padding: 10px 20px;
+    padding: 12px 24px;
     border-radius: 4px;
     font-weight: 500;
     text-decoration: none;
@@ -48,6 +49,12 @@ h1, h2, h3, h4, h5 {
     cursor: pointer;
     border: none;
     font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn-primary {
@@ -85,13 +92,14 @@ header {
     background-color: var(--primary);
     color: var(--white);
     padding: 8px 0;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .header-top .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .contact-info {
@@ -109,12 +117,12 @@ header {
 
 .social-icons {
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
 .social-icons a {
     color: var(--white);
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .main-header {
@@ -125,6 +133,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -178,9 +187,15 @@ nav ul li a {
     position: relative;
     padding: 5px 0;
     transition: var(--transition);
+    display: flex;
+    align-items: center;
 }
 
-nav ul li a:hover {
+nav ul li a:hover{
+    color: var(--secondary);
+}
+
+.active {
     color: var(--secondary);
 }
 
@@ -199,6 +214,10 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
+nav ul li .active::after {
+    width: 100%;
+}
+
 .header-buttons {
     display: flex;
     gap: 15px;
@@ -211,6 +230,8 @@ nav ul li a:hover::after {
     font-size: 24px;
     cursor: pointer;
     color: var(--primary);
+    z-index: 101;
+    min-height: 44px;
 }
 
 /* === HERO SECTION === */
@@ -337,6 +358,7 @@ nav ul li a:hover::after {
     font-weight: 500;
     cursor: pointer;
     transition: var(--transition);
+    min-height: 44px;
 }
 
 .tab-btn.active, .tab-btn:hover {
@@ -607,6 +629,7 @@ nav ul li a:hover::after {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .product-img img {
@@ -696,12 +719,110 @@ nav ul li a:hover::after {
     border: none;
     cursor: pointer;
     transition: var(--transition);
+    min-width: 44px;
+    min-height: 44px;
 }
 
 .btn-icon:hover {
     background: var(--primary);
     color: var(--white);
 }
+
+
+/* ===== LIGHTBOX STYLES ===== */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox.active {
+    display: flex;
+    opacity: 1;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    position: relative;
+    text-align: center;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 80vh;
+    border: 3px solid white;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+    z-index: 10001;
+    transition: transform 0.3s ease;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close:hover {
+    transform: rotate(90deg);
+    background: rgba(255, 0, 0, 0.7);
+}
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    z-index: 10001;
+}
+
+.lightbox-prev, .lightbox-next {
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s ease;
+}
+
+.lightbox-prev:hover, .lightbox-next:hover {
+    background: rgba(68, 125, 247, 0.8);
+}
+
 
 /* === ABOUT SECTION === */
 .about {
@@ -799,7 +920,7 @@ nav ul li a:hover::after {
 .form-group textarea,
 .form-group select {
     width: 100%;
-    padding: 12px;
+    padding: 15px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-family: 'Roboto', sans-serif;
@@ -971,20 +1092,26 @@ footer {
 }
 
 /* === RESPONSIVE DESIGN === */
+@media (max-width: 1200px) {
+    .hero h1, .page-hero h1 {
+        font-size: 42px;
+    }
+}
+
 @media (max-width: 992px) {
     .hero h1, .page-hero h1 {
         font-size: 36px;
     }
-    
+   
     nav ul {
         gap: 20px;
     }
-    
+   
     .about-grid,
     .contact-grid {
         grid-template-columns: 1fr;
     }
-    
+   
     .about-img {
         height: 400px;
     }
@@ -994,14 +1121,25 @@ footer {
     .header-top .container {
         flex-direction: column;
         gap: 10px;
+        text-align: center;
     }
-    
+   
+    .contact-info {
+        justify-content: center;
+        width: 100%;
+    }
+   
+    .social-icons {
+        justify-content: center;
+        width: 100;
+    }
+   
     .mobile-menu-btn {
         display: block;
     }
-    
+   
     nav {
-        position: fixed;
+       /* position: fixed;
         top: 140px;
         left: 0;
         width: 100%;
@@ -1010,7 +1148,18 @@ footer {
         padding: 20px;
         transform: translateY(-150%);
         transition: var(--transition);
-        z-index: 99;
+        z-index: 99; */
+
+         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        padding: 20px 0;
+        transition: var(--transition);
+        z-index: 100;
     }
     
     nav.active {
@@ -1020,6 +1169,7 @@ footer {
     nav ul {
         flex-direction: column;
         gap: 15px;
+        text-align: center;
     }
     
     .hero, .page-hero {
@@ -1028,40 +1178,229 @@ footer {
     
     .hero h1, .page-hero h1 {
         font-size: 32px;
+        padding: 0 15px;
     }
     
     .hero p, .page-hero p {
         font-size: 18px;
+        padding: 0 15px;
     }
     
     .hero-buttons, .cta-buttons {
         flex-direction: column;
         align-items: center;
+        padding: 0 15px;
     }
     
     .section-title h2 {
         font-size: 28px;
+        padding: 0 15px;
     }
     
     .header-buttons {
         display: none;
     }
+    
+    .categories-tabs {
+        justify-content: center;
+    }
+    
+    .product-actions {
+        flex-direction: column;
+    }
+    
+    .product-actions .btn {
+        width: 100%;
+    }
+
+    /* Mobile menu close button */
+    .mobile-close-btn {
+        top: 20px;
+        right: 20px;
+        color: white;
+        font-size: 24px;
+        z-index: 1001;
+        background: none;
+        border: none;
+        min-width: 44px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Mobile layout adjustments */
+    .features-grid,
+    .services-grid,
+    .testimonials-grid,
+    .team-grid,
+    .categories-grid,
+    .products-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .contact-form {
+        padding: 20px;
+    }
+
+    .lightbox-content img {
+        max-width: 95%;
+        max-height: 70vh;
+    }
+
+    .lightbox-close {
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+
+        .lightbox-prev,
+        .lightbox-next {
+            width: 40px;
+            height: 40px;
+            font-size: 1.5rem;
+        }
 }
 
 @media (max-width: 576px) {
+    .logo {
+        flex: 1;
+    }
+   
     .logo-text h1 {
         font-size: 20px;
     }
-    
+   
     .logo-text span {
         font-size: 12px;
     }
-    
+   
     .hero h1, .page-hero h1 {
         font-size: 28px;
     }
-    
+   
+    .hero p, .page-hero p {
+        font-size: 16px;
+    }
+   
+    .section-title h2 {
+        font-size: 24px;
+    }
+   
+    .feature-card, .service-card, .testimonial-card {
+        padding: 20px;
+    }
+   
     .categories-tabs {
         justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+   
+    .tab-btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+   
+    .product-content {
+        padding: 15px;
+    }
+    
+    .product-title {
+        font-size: 16px;
+    }
+    
+    .product-description {
+        font-size: 13px;
+        height: auto;
+    }
+    
+    .current-price {
+        font-size: 18px;
+    }
+    
+    .footer-grid {
+        gap: 30px;
+    }
+   
+    .footer-col {
+        text-align: center;
+    }
+   
+    .footer-col h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .footer-contact ul li {
+        justify-content: center;
+    }
+    
+    .footer-links ul li a {
+        justify-content: center;
+    }
+    
+    .footer-social .social-icons {
+        justify-content: center;
+    }
+    
+    .footer-hours p {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    item {
+        flex-direction: column 
+     }
+    .map {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-text h1 {
+        font-size: 18px;
+    }
+   
+    .hero h1, .page-hero h1 {
+        font-size: 24px;
+    }
+    
+    .hero p, .page-hero p {
+        font-size: 15px;
+    }
+    
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+    
+    .feature-card h3 {
+        font-size: 18px;
+    }
+    
+    .product-img {
+        height: 160px;
+    }
+    
+    .btn {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+    
+    .footer-bottom p {
+        font-size: 12px;
+    }
+
+    .footer-col h3 {
+        font-size: 18px;
     }
 }
