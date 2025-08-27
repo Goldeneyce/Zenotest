@@ -1,4 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+    function addToCart(item) {
+        cart.push(item);
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    function addToWishlist(item) {
+        wishlist.push(item);
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
+    }
+
+    function removeFromWishlist(name) {
+        wishlist = wishlist.filter(i => i.name !== name);
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
+    }
+
     // Reusable function to close overlays
     function closeOverlay(element, toggleElement = null) {
         element.classList.remove('active');
@@ -338,6 +356,9 @@ document.addEventListener('DOMContentLoaded', function() {
             btn.addEventListener('click', function() {
                 const productCard = this.closest('.product-card');
                 const productName = productCard.querySelector('.product-title').textContent;
+                const productPrice = productCard.querySelector('.current-price').textContent.replace('$', '').replace(',', '');
+
+                addToCart({name: productName, price: productPrice});
 
                 // Dispatch custom event for extensibility
                 const addEvent = new CustomEvent('addToCart', { detail: { productName } });
@@ -378,20 +399,54 @@ document.addEventListener('DOMContentLoaded', function() {
         // Wishlist functionality
         const wishlistBtns = productsGrid.querySelectorAll('.btn-icon'); // Scoped query
         wishlistBtns.forEach(btn => {
+            const productCard = btn.closest('.product-card');
+            const productName = productCard.querySelector('.product-title').textContent;
+            const icon = btn.querySelector('i');
+
+            // Set initial state
+            if (wishlist.some(item => item.name === productName)) {
+                icon.classList.replace('far', 'fas');
+                icon.style.color = 'var(--secondary)';
+            }
+
             btn.addEventListener('click', function() {
-                const icon = this.querySelector('i');
                 if (icon.classList.contains('far')) {
                     icon.classList.replace('far', 'fas');
                     icon.style.color = 'var(--secondary)';
+                    addToWishlist({name: productName});
                 } else {
                     icon.classList.replace('fas', 'far');
                     icon.style.color = '';
+                    removeFromWishlist(productName);
                 }
 
                 // Dispatch custom event for extensibility
                 const wishlistEvent = new CustomEvent('toggleWishlist', { detail: { added: icon.classList.contains('fas') } });
                 document.dispatchEvent(wishlistEvent);
             });
+        });
+    }
+
+    // WhatsApp link handler
+    const whatsappLink = document.getElementById('whatsapp-link');
+    if (whatsappLink) {
+        whatsappLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            const phone = '1234567890'; // International format without +
+            let message = 'Hello, I am interested in:\n\nCart:\n';
+            cart.forEach(item => message += `- ${item.name} - $${item.price}\n`);
+            message += '\nWishlist:\n';
+            wishlist.forEach(item => message += `- ${item.name}\n`);
+
+            if (cart.length === 0 && wishlist.length === 0) {
+                message = "Hello, I'd like to inquire about your products.";
+            }
+
+            const encoded = encodeURIComponent(message);
+            whatsappLink.href = `https://wa.me/${phone}?text=${encoded}`;
+            setTimeout(() => {
+                window.open(whatsappLink.href, '_blank');
+            }, 0);
         });
     }
 
