@@ -204,6 +204,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
         // Tab functionality for categories
+
     const tabBtns = document.querySelectorAll('.tab-btn');
     if (tabBtns.length > 0) {
         tabBtns.forEach(btn => {
@@ -215,9 +216,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 const category = btn.dataset.category;
                 // Directly query the grid (assuming only one per page; adjust selector if needed for multiple grids)
-                const cardsContainer = document.querySelector('.categories-grid');
+                const cardsContainer = document.querySelector('.categories-grid') || document.querySelector('.products-grid');
                 if (cardsContainer) {
-                    const cards = cardsContainer.querySelectorAll('.category-card');
+                    const cardSelector = cardsContainer.classList.contains('categories-grid') ? '.category-card' : '.product-card';
+                    const cards = cardsContainer.querySelectorAll(cardSelector);
+                   // const cards = cardsContainer.querySelectorAll('.category-card');
                     // Show/hide cards based on category
                     cards.forEach(card => {
                         card.style.display = (category === 'all' || card.dataset.category === category) ? '' : 'none';

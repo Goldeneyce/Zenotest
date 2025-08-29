@@ -381,7 +381,12 @@ nav ul li .active::after {
 
 .category-img {
     height: 200px;
-    background: var(--light);
+    background-color: var(--primary);
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 48px;
     margin-bottom: 20px;
     border-radius: 4px;
 }
@@ -1443,6 +1448,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
 }
 
 .whatsapp-icon {
