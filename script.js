@@ -203,7 +203,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.warn('Lightbox elements are missing.');
     }
 
-    // Tab functionality for categories
+        // Tab functionality for categories
     const tabBtns = document.querySelectorAll('.tab-btn');
     if (tabBtns.length > 0) {
         tabBtns.forEach(btn => {
@@ -214,16 +214,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 btn.classList.add('active');
 
                 const category = btn.dataset.category;
-                // Scope to the closest container for better modularity
-                const tabContainer = btn.closest('.tab-container');
-                const cardsContainer = tabContainer ? tabContainer.querySelector('.categories-grid') : null;
-
+                // Directly query the grid (assuming only one per page; adjust selector if needed for multiple grids)
+                const cardsContainer = document.querySelector('.categories-grid');
                 if (cardsContainer) {
                     const cards = cardsContainer.querySelectorAll('.category-card');
-
                     // Show/hide cards based on category
                     cards.forEach(card => {
-                        card.style.display = (category === 'all' || card.dataset.category === category) ? 'block' : 'none';
+                        card.style.display = (category === 'all' || card.dataset.category === category) ? '' : 'none';
                     });
                 }
             });
