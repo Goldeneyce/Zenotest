@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Mobile Navigation Toggle
 const hamburger = document.getElementById('hamburger');
-const navMenu = document.querySelector('.nav-menu');
+const navMenu = document.querySelector('.mainNav');
 
 if (hamburger) {
     hamburger.addEventListener('click', () => {
@@ -104,7 +104,7 @@ if (hamburger) {
 }
 
 // Close mobile menu when a link is clicked
-document.querySelectorAll('.nav-menu a').forEach(link => {
+document.querySelectorAll('.mainNav a').forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
         hamburger.classList.remove('active');
@@ -114,7 +114,7 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
 // Set active navigation link based on current page
 document.addEventListener('DOMContentLoaded', function() {
     const currentPage = window.location.pathname.split('/').pop();
-    const navLinks = document.querySelectorAll('.nav-menu a');
+    const navLinks = document.querySelectorAll('.mainNav a');
     
     navLinks.forEach(link => {
         const linkPage = link.getAttribute('href');
