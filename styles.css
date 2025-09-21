@@ -1183,15 +1183,16 @@ footer {
    
     nav {
          display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
+        position: fixed;
+        top: 80px;
+        left: -100%;
         width: 100%;
+        height: calc(100vh - 80px);
         background: rgba(0, 0, 0, 0.9);
         flex-direction: column;
         padding: 20px 0;
         transition: var(--transition);
-        z-index: 100;
+        z-index: 999;
     }
     
     nav.active {
@@ -1200,6 +1201,7 @@ footer {
     
     nav ul {
         flex-direction: column;
+        align-items: center;
         gap: 15px;
         text-align: center;
     }
