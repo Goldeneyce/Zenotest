@@ -509,7 +509,7 @@ hero p {
 
 /* === CTA SECTION === */
 .cta {
-    background: linear-gradient(rgba(10, 79, 122, 0.85), rgba(10, 79, 122, 0.85)), url('assets/Home.avif');
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('assets/Home.avif');
     background-size: cover;
     background-position: center;
     color: var(--white);
