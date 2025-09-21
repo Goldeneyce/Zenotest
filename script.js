@@ -91,6 +91,42 @@ document.addEventListener('DOMContentLoaded', function() {
         console.warn('Mobile menu elements are missing.');
     }
 
+
+    // Mobile Navigation Toggle
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.querySelector('.nav-menu');
+
+if (hamburger) {
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
+}
+
+// Close mobile menu when a link is clicked
+document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+    });
+});
+
+// Set active navigation link based on current page
+document.addEventListener('DOMContentLoaded', function() {
+    const currentPage = window.location.pathname.split('/').pop();
+    const navLinks = document.querySelectorAll('.nav-menu a');
+    
+    navLinks.forEach(link => {
+        const linkPage = link.getAttribute('href');
+        if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
+            link.classList.add('active');
+        }
+    });
+});
+
+
+
+
     // Lightbox functionality - FIXED FOR PRODUCT PAGE
     const lightbox = document.querySelector('.lightbox');
     const lightboxImg = lightbox ? lightbox.querySelector('img') : null;

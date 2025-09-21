@@ -235,9 +235,36 @@ nav ul li .active::after {
     min-height: 44px;
 }
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: var(--primary-black);
+    margin-bottom: 5px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
 /* === HERO SECTION === */
 .hero {
-    background: linear-gradient(rgba(10, 79, 122, 0.85), rgba(10, 79, 122, 0.85)), url('assets/zenhero.avif');
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('assets/zenhero3.jpg');
     background-size: cover;
     background-position: center;
     color: var(--white);
@@ -1148,6 +1175,10 @@ footer {
    
     .mobile-menu-btn {
         display: block;
+    }
+
+    .hamburger {
+        display: flex;
     }
    
     nav {
