@@ -3,24 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zenon Electrics - Products</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Zenon Electrics - Premium Products</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
+
     <header>
         <div class="header-top">
             <div class="container">
                 <div class="contact-info">
-                    <!-- <a href="tel:+1234567890"><i class="fas fa-phone"></i> +123 456 7890</a> --> 
+                    <a href="tel:+1234567890"><i class="fas fa-phone-alt"></i> +123 456 7890</a>
                     <a href="mailto:info@zenonelectrics.com"><i class="fas fa-envelope"></i> info@zenonelectrics.com</a>
                 </div>
                 <div class="social-icons">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
-                    <!--- <a href="#"><i class="fab fa-linkedin-in"></i></a> -->
-                    <a href="https://wa.me/2348162031086" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
         </div>
@@ -29,31 +31,35 @@
                 <a href="index.html" class="logo">
                     <div class="logo-icon">Z</div>
                     <div class="logo-text">
-                        <h1>ZENON ELECTRICS</h1>
+                        <h1>ZENTRICS</h1>
                         <span>Powering Smarter, Safer, Sustainable Living</span>
                     </div>
                 </a>
-                <nav id="mainNav">
+                <nav>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
                         <li><a href="products.html" class="active">Products</a></li>
                         <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </nav>
                 <div class="header-buttons">
-                    <a href="contact.html" class="btn btn-outline">Get Quote</a>
+                    <a href="#" class="btn btn-outline">Get Quote</a>
                     <a href="contact.html" class="btn btn-primary">Contact Us</a>
                 </div>
-                <button id="menuToggle" class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
     </header>
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Premium Electronics Collection</h1>
+            <h1>Premium Collection</h1>
             <p>Discover cutting-edge technology for your home and business</p>
         </div>
     </section>
@@ -62,8 +68,8 @@
         <div class="container">
             <div class="section-title">
                 <h2>Featured Products</h2>
-                <p>Explore our wide range of high-quality electronics and appliances</p>
             </div>
+            <p class="section-subtitle">Explore our wide range of high-quality electronics and appliances</p>
             <div class="categories-tabs">
                 <button class="tab-btn active" data-category="all">All Products</button>
                 <button class="tab-btn" data-category="power">Power & Energy</button>
@@ -73,13 +79,10 @@
                 <button class="tab-btn" data-category="security">Security</button>
             </div>
             <div class="products-grid">
-
-                <!-- LED Projector -->
-
                 <div class="product-card" data-category="entertainment">
                     <span class="product-badge">New</span>
                     <div class="product-img">
-                        <img src="https://images.unsplash.com/photo-1611078489935-0cb964de46d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="UltraHD 4K LED Projector">
+                        <img src="assets/projector.jpg" alt="UltraHD 4K LED Projector">
                     </div>
                     <div class="product-content">
                         <span class="product-category">Entertainment</span>
@@ -90,26 +93,21 @@
                             <span class="old-price">₦499.99</span>
                         </div>
                         <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                             <span>(142 reviews)</span>
                         </div>
                         <div class="product-actions">
                             <button class="btn btn-primary">Add to Cart</button>
-                            <button class="btn btn-icon"><i class="far fa-heart"></i></button>
+                            <button class="btn btn-buy">Buy Now</button>
+                            <button class="btn-icon"><i class="far fa-heart"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Smart French Door Refrigerator -->
-
                 <div class="product-card" data-category="appliances">
                     <span class="product-badge">Smart</span>
                     <div class="product-img">
-                        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1170&q=80" alt="Smart French Door Refrigerator">
+                        <img src="assets/refrigerator.jpg" alt="Smart French Door Refrigerator">
                     </div>
                     <div class="product-content">
                         <span class="product-category">Home Appliances</span>
@@ -120,27 +118,22 @@
                             <span class="old-price">₦2,199.99</span>
                         </div>
                         <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             <span>(89 reviews)</span>
                         </div>
                         <div class="product-actions">
                             <button class="btn btn-primary">Add to Cart</button>
-                            <button class="btn btn-icon"><i class="far fa-heart"></i></button>
+                            <button class="btn btn-buy">Buy Now</button>
+                            <button class="btn-icon"><i class="far fa-heart"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Inverter Split AC 1.5 Ton -->
-
-                <div class="product-card" data-category="appliances">
+                <div class="product-card" data-category="cooling">
                     <span class="product-badge">Energy Efficient</span>
                     <span class="product-badge">Eco-Friendly</span>
                     <div class="product-img">
-                        <img src="https://unsplash.com/photos/a-couple-of-air-conditioners-sitting-next-to-each-other-LNHHSNu1nzA&auto=format&fit=crop&w=1176&q=80" alt="Inverter Split AC 1.5 Ton">
+                        <img src="assets/ac.jpg" alt="Inverter Split AC 1.5 Ton">
                     </div>
                     <div class="product-content">
                         <span class="product-category">Cooling Solutions</span>
@@ -151,25 +144,20 @@
                             <span class="old-price">₦749.99</span>
                         </div>
                         <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             <span>(204 reviews)</span>
                         </div>
                         <div class="product-actions">
                             <button class="btn btn-primary">Add to Cart</button>
-                            <button class="btn btn-icon"><i class="far fa-heart"></i></button>
+                            <button class="btn btn-buy">Buy Now</button>
+                            <button class="btn-icon"><i class="far fa-heart"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <!-- 4-Slice Stainless Steel Toaster -->
-
                 <div class="product-card" data-category="kitchen">
                     <div class="product-img">
-                        <img src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1189&q=80" alt="4-Slice Stainless Steel Toaster">
+                        <img src="assets/toaster.jpg" alt="4-Slice Stainless Steel Toaster">
                     </div>
                     <div class="product-content">
                         <span class="product-category">Kitchen Essentials</span>
@@ -180,26 +168,21 @@
                             <span class="old-price">₦79.99</span>
                         </div>
                         <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
                             <span>(67 reviews)</span>
                         </div>
                         <div class="product-actions">
                             <button class="btn btn-primary">Add to Cart</button>
-                            <button class="btn btn-icon"><i class="far fa-heart"></i></button>
+                            <button class="btn btn-buy">Buy Now</button>
+                            <button class="btn-icon"><i class="far fa-heart"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Smart Robot Vacuum Cleaner -->
-
                 <div class="product-card" data-category="appliances">
                     <span class="product-badge">Best Seller</span>
                     <div class="product-img">
-                        <img src="https://placehold.co/300x300" alt="Smart Robot Vacuum Cleaner">
+                        <img src="assets/vacuum.jpg" alt="Smart Robot Vacuum Cleaner">
                     </div>
                     <div class="product-content">
                         <span class="product-category">Home Appliances</span>
@@ -210,26 +193,21 @@
                             <span class="old-price">₦399.99</span>
                         </div>
                         <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             <span>(321 reviews)</span>
                         </div>
                         <div class="product-actions">
                             <button class="btn btn-primary">Add to Cart</button>
-                            <button class="btn btn-icon"><i class="far fa-heart"></i></button>
+                            <button class="btn btn-buy">Buy Now</button>
+                            <button class="btn-icon"><i class="far fa-heart"></i></button>
                         </div>
                     </div>
-                </div> 
-
-                <!-- 9kg Front Load Washing Machine -->
+                </div>
 
                 <div class="product-card" data-category="appliances">
                     <span class="product-badge">Smart</span>
                     <div class="product-img">
-                        <img src="https://placehold.co/300x300" alt="9kg Front Load Washing Machine">
+                        <img src="assets/washing-machine.jpg" alt="9kg Front Load Washing Machine">
                     </div>
                     <div class="product-content">
                         <span class="product-category">Home Appliances</span>
@@ -240,25 +218,20 @@
                             <span class="old-price">₦899.99</span>
                         </div>
                         <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                             <span>(115 reviews)</span>
                         </div>
                         <div class="product-actions">
                             <button class="btn btn-primary">Add to Cart</button>
-                            <button class="btn btn-icon"><i class="far fa-heart"></i></button>
+                            <button class="btn btn-buy">Buy Now</button>
+                            <button class="btn-icon"><i class="far fa-heart"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <!-- 25L Convection Microwave Oven -->
-
                 <div class="product-card" data-category="kitchen">
                     <div class="product-img">
-                        <img src="https://placehold.co/300x300" alt="25L Convection Microwave Oven">
+                        <img src="assets/microwave.jpg" alt="25L Convection Microwave Oven">
                     </div>
                     <div class="product-content">
                         <span class="product-category">Kitchen Essentials</span>
@@ -269,26 +242,21 @@
                             <span class="old-price">₦199.99</span>
                         </div>
                         <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
                             <span>(98 reviews)</span>
                         </div>
                         <div class="product-actions">
                             <button class="btn btn-primary">Add to Cart</button>
-                            <button class="btn btn-icon"><i class="far fa-heart"></i></button>
+                            <button class="btn btn-buy">Buy Now</button>
+                            <button class="btn-icon"><i class="far fa-heart"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <!-- 4K Smart Security Camera -->
-
                 <div class="product-card" data-category="security">
                     <span class="product-badge">Top Rated</span>
                     <div class="product-img">
-                        <img src="https://placehold.co/300x300" alt="4K Smart Security Camera">
+                        <img src="assets/camera.jpg" alt="4K Smart Security Camera">
                     </div>
                     <div class="product-content">
                         <span class="product-category">Security</span>
@@ -299,26 +267,21 @@
                             <span class="old-price">₦159.99</span>
                         </div>
                         <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             <span>(256 reviews)</span>
                         </div>
                         <div class="product-actions">
                             <button class="btn btn-primary">Add to Cart</button>
-                            <button class="btn btn-icon"><i class="far fa-heart"></i></button>
+                            <button class="btn btn-buy">Buy Now</button>
+                            <button class="btn-icon"><i class="far fa-heart"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Smart Programmable Coffee Maker -->
-
                 <div class="product-card" data-category="kitchen">
                     <span class="product-badge">Smart</span>
                     <div class="product-img">
-                        <img src="https://placehold.co/300x300" alt="Smart Programmable Coffee Maker">
+                        <img src="assets/coffee-maker.jpg" alt="Smart Programmable Coffee Maker">
                     </div>
                     <div class="product-content">
                         <span class="product-category">Kitchen Essentials</span>
@@ -329,16 +292,13 @@
                             <span class="old-price">₦119.99</span>
                         </div>
                         <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                             <span>(83 reviews)</span>
                         </div>
                         <div class="product-actions">
                             <button class="btn btn-primary">Add to Cart</button>
-                            <button class="btn btn-icon"><i class="far fa-heart"></i></button>
+                            <button class="btn btn-buy">Buy Now</button>
+                            <button class="btn-icon"><i class="far fa-heart"></i></button>
                         </div>
                     </div>
                 </div>
@@ -347,9 +307,9 @@
     </section>
 
     <div class="lightbox">
-        <span class="lightbox-close">&times;</span>
-        <span class="lightbox-prev">&lt;</span>
-        <span class="lightbox-next">&gt;</span>
+        <button class="lightbox-close">&times;</button>
+        <button class="lightbox-prev">&lt;</button>
+        <button class="lightbox-next">&gt;</button>
         <div class="lightbox-content">
             <img src="" alt="Product Image">
         </div>
@@ -359,66 +319,66 @@
         <div class="container">
             <h2>Can't Find What You're Looking For?</h2>
             <p>Contact us for custom solutions or special orders</p>
-            <div class="cta-buttons">
-                <a href="contact.html" class="btn btn-primary">Get in Touch</a>
-            </div>
+            <a href="contact.html" class="btn btn-primary">Get in Touch</a>
         </div>
     </section>
 
     <footer>
-        <div class="footer-content">
-            <div class="container">
-                <div class="footer-grid">
-                    <div class="footer-col footer-about">
-                        <h3>About Zenon Electrics</h3>
-                        <p>We empower homes and businesses with integrated technology solutions designed for comfort, security, efficiency, and entertainment.</p>
-                        <div class="footer-social">
-                            <h4>Follow Us</h4>
-                            <div class="social-icons">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <!--- <a href="#"><i class="fab fa-linkedin-in"></i></a> -->
-                                <a href="https://wa.me/2348162031086" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer-col footer-contact">
-                        <h3>Contact Info</h3>
-                        <ul>
-                            <li><i class="fas fa-map-marker-alt"></i> 123 Tech Avenue, Innovation City</li>
-                            <li><i class="fas fa-phone"></i> +123 456 7890</li>
-                            <li><i class="fas fa-envelope"></i> info@zenonelectrics.com</li>
-                            <li><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 6:00 PM<br>Sat: 9:00 AM - 4:00 PM</li>
-                        </ul>
-                    </div>
-                    <div class="footer-col footer-links">
-                        <h3>Quick Links</h3>
-                        <ul>
-                            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
-                            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
-                            <li><a href="products.html"><i class="fas fa-chevron-right"></i> Products</a></li>
-                            <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
-                            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col footer-hours">
-                        <h3>Business Hours</h3>
-                        <p>Monday - Friday <span>8:00 AM - 6:00 PM</span></p>
-                        <p>Saturday <span>9:00 AM - 4:00 PM</span></p>
-                        <p>Sunday <span>Closed</span></p>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>About Zenon Electrics</h3>
+                <p>We empower homes and businesses with integrated technology solutions designed for comfort, security, efficiency, and entertainment.</p>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <p>&copy; <span id="currentYear"></span> Zenon Electrics. All Rights Reserved. | Designed with <i class="fas fa-heart"></i> for Smart Living</p>
+            <div class="footer-col">
+                <h3>Contact Info</h3>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Tech Avenue, Innovation City</li>
+                    <li><i class="fas fa-phone-alt"></i> +2348103664912</li>
+                    <li><i class="fas fa-envelope"></i> info@zenonelectrics.com</li>
+                    <li><i class="far fa-clock"></i> Mon-Fri: 8:00 AM - 6:00 PM<br>Sat: 9:00 AM - 4:00 PM</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                    <li><a href="products.html"><i class="fas fa-chevron-right"></i> Products</a></li>
+                    <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                    <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Business Hours</h3>
+                <p class="footer-hours">
+                    <span>Monday - Friday</span> <span>8:00 AM - 6:00 PM</span>
+                </p>
+                <p class="footer-hours">
+                    <span>Saturday</span> <span>9:00 AM - 4:00 PM</span>
+                </p>
+                <p class="footer-hours">
+                    <span>Sunday</span> <span>Closed</span>
+                </p>
             </div>
         </div>
+        <div class="footer-bottom">
+            <p>© <span id="currentYear"></span> Zenon Electrics. All Rights Reserved. | Designed with <i class="fas fa-heart"></i> for Smart Living</p>
+        </div>
     </footer>
-    
-    <a href="https://wa.me/2348162031086" id="whatsapp-link" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp whatsapp-icon"></i></a>
+
+    <a href="https://wa.me/1234567890" class="whatsapp-float" id="whatsapp-link">
+        <i class="fab fa-whatsapp whatsapp-icon"></i>
+    </a>
 
     <script src="script.js"></script>
 </body>

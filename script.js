@@ -100,6 +100,7 @@ if (hamburger) {
     hamburger.addEventListener('click', () => {
         navMenu.classList.toggle('active');
         hamburger.classList.toggle('active');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
     });
 }
 
